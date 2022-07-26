@@ -1,0 +1,811 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QL_KVCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ACCOUNT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="USERNAME" Type="varchar" MaxLength="50" />
+    <Property Name="PASS" Type="varchar" MaxLength="50" />
+    <Property Name="MANV" Type="varchar" MaxLength="10" />
+    <Property Name="MALOAI" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="BAOTRI">
+    <Key>
+      <PropertyRef Name="MABAOTRI" />
+    </Key>
+    <Property Name="MABAOTRI" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TONGTHOIGIANBAOTRI" Type="int" />
+    <Property Name="MANV" Type="varchar" MaxLength="10" />
+    <Property Name="MAXE" Type="varchar" MaxLength="10" />
+    <Property Name="NGAYLAP" Type="date" />
+  </EntityType>
+  <EntityType Name="CTBAOTRI">
+    <Key>
+      <PropertyRef Name="MACTBAOTRI" />
+    </Key>
+    <Property Name="MACTBAOTRI" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MABAOTRI" Type="varchar" MaxLength="10" />
+    <Property Name="NOIDUNG" Type="text" />
+    <Property Name="THOIGIANBAOTRI" Type="int" />
+    <Property Name="MATHIETBI" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="CTHDDOBAOHO">
+    <Key>
+      <PropertyRef Name="MAHD" />
+      <PropertyRef Name="MADBH" />
+    </Key>
+    <Property Name="MAHD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MADBH" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MALOAIDBH" Type="varchar" MaxLength="10" />
+    <Property Name="DONGIA" Type="float" />
+  </EntityType>
+  <EntityType Name="CTHOADONBANVE">
+    <Key>
+      <PropertyRef Name="MACTHD" />
+    </Key>
+    <Property Name="MACTHD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MAHD" Type="varchar" MaxLength="10" />
+    <Property Name="MALOAIVE" Type="varchar" MaxLength="10" />
+    <Property Name="MAXE" Type="varchar" MaxLength="10" />
+    <Property Name="DONGIA" Type="float" />
+  </EntityType>
+  <EntityType Name="CTPHIEUNHAPDBH">
+    <Key>
+      <PropertyRef Name="MAPN" />
+      <PropertyRef Name="MANCC" />
+      <PropertyRef Name="TENDBH" />
+    </Key>
+    <Property Name="MAPN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MANCC" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TENDBH" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SOLUONG" Type="int" />
+    <Property Name="DONGIA" Type="float" />
+  </EntityType>
+  <EntityType Name="CTPHIEUNHAPTTB">
+    <Key>
+      <PropertyRef Name="MAPN" />
+      <PropertyRef Name="MANCC" />
+      <PropertyRef Name="MATHIETBI" />
+    </Key>
+    <Property Name="MAPN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MANCC" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MATHIETBI" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SOLUONG" Type="int" />
+    <Property Name="DONGIA" Type="float" />
+  </EntityType>
+  <EntityType Name="CTPHIEUNHAPXE">
+    <Key>
+      <PropertyRef Name="MAPN" />
+      <PropertyRef Name="MANCC" />
+      <PropertyRef Name="TENXE" />
+    </Key>
+    <Property Name="MAPN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MANCC" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TENXE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SOLUONG" Type="int" />
+    <Property Name="DONGIA" Type="float" />
+  </EntityType>
+  <EntityType Name="DICHVUTHUEHLV">
+    <Key>
+      <PropertyRef Name="MADV" />
+    </Key>
+    <Property Name="MADV" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="THOIGIAN" Type="time" Precision="7" />
+    <Property Name="TENDV" Type="nvarchar" MaxLength="50" />
+    <Property Name="DONGIA" Type="float" />
+  </EntityType>
+  <EntityType Name="DOBAOHO">
+    <Key>
+      <PropertyRef Name="MADOBAOHO" />
+    </Key>
+    <Property Name="MADOBAOHO" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TENDOBAOHO" Type="nvarchar" MaxLength="50" />
+    <Property Name="MALOAIDBH" Type="varchar" MaxLength="10" />
+    <Property Name="MANHACC" Type="varchar" MaxLength="10" />
+    <Property Name="TRANGTHAI" Type="bit" />
+  </EntityType>
+  <EntityType Name="HOADONBANVE">
+    <Key>
+      <PropertyRef Name="MAHD" />
+    </Key>
+    <Property Name="MAHD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MAKH" Type="varchar" MaxLength="10" />
+    <Property Name="MANV" Type="varchar" MaxLength="10" />
+    <Property Name="NGAYIN" Type="date" />
+    <Property Name="TONGTIEN" Type="float" />
+  </EntityType>
+  <EntityType Name="HOADONTHUEHLV">
+    <Key>
+      <PropertyRef Name="MAHD" />
+    </Key>
+    <Property Name="MAHD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="NGAYLAP" Type="date" />
+    <Property Name="MANV" Type="varchar" MaxLength="10" />
+    <Property Name="MAKH" Type="varchar" MaxLength="10" />
+    <Property Name="MAHLV" Type="varchar" MaxLength="10" />
+    <Property Name="MADV" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="HOADONTHUEHLVCTXE">
+    <Key>
+      <PropertyRef Name="MAHD" />
+      <PropertyRef Name="MAXE" />
+    </Key>
+    <Property Name="MAHD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MAXE" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DEOBIET" Type="bit" />
+  </EntityType>
+  <EntityType Name="HOATDONG">
+    <Key>
+      <PropertyRef Name="MAXE" />
+    </Key>
+    <Property Name="MAXE" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MAKH" Type="varchar" MaxLength="10" />
+    <Property Name="BATDAU" Type="time" Precision="7" />
+    <Property Name="THOIGIAN" Type="time" Precision="7" />
+    <Property Name="MAHLV" Type="varchar" MaxLength="10" />
+    <Property Name="TRANGTHAI" Type="bit" />
+    <Property Name="MAHD" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="HUANLUYENVIEN">
+    <Key>
+      <PropertyRef Name="MAHLV" />
+    </Key>
+    <Property Name="MAHLV" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TENHLV" Type="nvarchar" MaxLength="50" />
+    <Property Name="GIOITINH" Type="nvarchar" MaxLength="10" />
+    <Property Name="DIACHI" Type="nvarchar" MaxLength="50" />
+    <Property Name="TRANGTHAI" Type="bit" />
+  </EntityType>
+  <EntityType Name="KHACHHANG">
+    <Key>
+      <PropertyRef Name="MAKH" />
+    </Key>
+    <Property Name="MAKH" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TENKH" Type="nvarchar" MaxLength="50" />
+    <Property Name="GIOITINH" Type="nvarchar" MaxLength="10" />
+    <Property Name="SDT" Type="varchar" MaxLength="11" />
+  </EntityType>
+  <EntityType Name="LOAIDOBAOHO">
+    <Key>
+      <PropertyRef Name="MALOAIDBH" />
+    </Key>
+    <Property Name="MALOAIDBH" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TENLOAIDBH" Type="nvarchar" MaxLength="50" />
+    <Property Name="DONGIA" Type="float" />
+  </EntityType>
+  <EntityType Name="LOAINHANVIEN">
+    <Key>
+      <PropertyRef Name="MALOAI" />
+    </Key>
+    <Property Name="MALOAI" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TENLOAI" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LOAIVE">
+    <Key>
+      <PropertyRef Name="MALOAIVE" />
+    </Key>
+    <Property Name="MALOAIVE" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TENLOAIVE" Type="nvarchar" MaxLength="50" />
+    <Property Name="THOIGIAN" Type="time" Precision="7" />
+    <Property Name="DONGIA" Type="float" />
+  </EntityType>
+  <EntityType Name="NHACC">
+    <Key>
+      <PropertyRef Name="MANCC" />
+    </Key>
+    <Property Name="MANCC" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TENNCC" Type="nvarchar" MaxLength="50" />
+    <Property Name="DIACHI" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="MANV" />
+    </Key>
+    <Property Name="MANV" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TENNV" Type="nvarchar" MaxLength="50" />
+    <Property Name="GIOITINH" Type="nvarchar" MaxLength="10" />
+    <Property Name="MALOAI" Type="varchar" MaxLength="10" />
+    <Property Name="DIACHI" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PHIEUNHAP">
+    <Key>
+      <PropertyRef Name="MAPN" />
+    </Key>
+    <Property Name="MAPN" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LOAIPN" Type="int" />
+    <Property Name="NGAYNHAP" Type="date" />
+    <Property Name="TONGTIEN" Type="float" />
+    <Property Name="MANV" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="TRANGTHIETBI">
+    <Key>
+      <PropertyRef Name="MATHIETBI" />
+    </Key>
+    <Property Name="MATHIETBI" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TENTHIETBI" Type="nvarchar" MaxLength="50" />
+    <Property Name="NGAYNHAP" Type="date" />
+    <Property Name="MANCC" Type="varchar" MaxLength="10" />
+    <Property Name="TONKHO" Type="int" />
+  </EntityType>
+  <EntityType Name="XE">
+    <Key>
+      <PropertyRef Name="MAXE" />
+    </Key>
+    <Property Name="MAXE" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TENXE" Type="nvarchar" MaxLength="50" />
+    <Property Name="NGAYNHAP" Type="date" />
+    <Property Name="MANCC" Type="varchar" MaxLength="10" />
+    <Property Name="TRANGTHAI" Type="bit" />
+  </EntityType>
+  <Association Name="FK_ACCOUNT_LOAINHANVIEN">
+    <End Role="LOAINHANVIEN" Type="Self.LOAINHANVIEN" Multiplicity="0..1" />
+    <End Role="ACCOUNT" Type="Self.ACCOUNT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAINHANVIEN">
+        <PropertyRef Name="MALOAI" />
+      </Principal>
+      <Dependent Role="ACCOUNT">
+        <PropertyRef Name="MALOAI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ACCOUNT_NHANVIEN">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+    <End Role="ACCOUNT" Type="Self.ACCOUNT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MANV" />
+      </Principal>
+      <Dependent Role="ACCOUNT">
+        <PropertyRef Name="MANV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BAOTRI_CTBAOTRI">
+    <End Role="BAOTRI" Type="Self.BAOTRI" Multiplicity="0..1" />
+    <End Role="CTBAOTRI" Type="Self.CTBAOTRI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BAOTRI">
+        <PropertyRef Name="MABAOTRI" />
+      </Principal>
+      <Dependent Role="CTBAOTRI">
+        <PropertyRef Name="MABAOTRI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTHDDOBAOHO_DOBAOHO">
+    <End Role="DOBAOHO" Type="Self.DOBAOHO" Multiplicity="1" />
+    <End Role="CTHDDOBAOHO" Type="Self.CTHDDOBAOHO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DOBAOHO">
+        <PropertyRef Name="MADOBAOHO" />
+      </Principal>
+      <Dependent Role="CTHDDOBAOHO">
+        <PropertyRef Name="MADBH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTHDDOBAOHO_HOADONBANVE">
+    <End Role="HOADONBANVE" Type="Self.HOADONBANVE" Multiplicity="1" />
+    <End Role="CTHDDOBAOHO" Type="Self.CTHDDOBAOHO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOADONBANVE">
+        <PropertyRef Name="MAHD" />
+      </Principal>
+      <Dependent Role="CTHDDOBAOHO">
+        <PropertyRef Name="MAHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTHDDOBAOHO_LOAIDOBAOHO">
+    <End Role="LOAIDOBAOHO" Type="Self.LOAIDOBAOHO" Multiplicity="0..1" />
+    <End Role="CTHDDOBAOHO" Type="Self.CTHDDOBAOHO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAIDOBAOHO">
+        <PropertyRef Name="MALOAIDBH" />
+      </Principal>
+      <Dependent Role="CTHDDOBAOHO">
+        <PropertyRef Name="MALOAIDBH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTHOADONBANVE_HOADONBANVE">
+    <End Role="HOADONBANVE" Type="Self.HOADONBANVE" Multiplicity="0..1" />
+    <End Role="CTHOADONBANVE" Type="Self.CTHOADONBANVE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOADONBANVE">
+        <PropertyRef Name="MAHD" />
+      </Principal>
+      <Dependent Role="CTHOADONBANVE">
+        <PropertyRef Name="MAHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTHOADONBANVE_LOAIVE">
+    <End Role="LOAIVE" Type="Self.LOAIVE" Multiplicity="0..1" />
+    <End Role="CTHOADONBANVE" Type="Self.CTHOADONBANVE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAIVE">
+        <PropertyRef Name="MALOAIVE" />
+      </Principal>
+      <Dependent Role="CTHOADONBANVE">
+        <PropertyRef Name="MALOAIVE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTHOADONBANVE_XE">
+    <End Role="XE" Type="Self.XE" Multiplicity="0..1" />
+    <End Role="CTHOADONBANVE" Type="Self.CTHOADONBANVE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XE">
+        <PropertyRef Name="MAXE" />
+      </Principal>
+      <Dependent Role="CTHOADONBANVE">
+        <PropertyRef Name="MAXE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTPHIEUNHAPDBH_NHACC">
+    <End Role="NHACC" Type="Self.NHACC" Multiplicity="1" />
+    <End Role="CTPHIEUNHAPDBH" Type="Self.CTPHIEUNHAPDBH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHACC">
+        <PropertyRef Name="MANCC" />
+      </Principal>
+      <Dependent Role="CTPHIEUNHAPDBH">
+        <PropertyRef Name="MANCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTPHIEUNHAPDBH_PHIEUNHAP">
+    <End Role="PHIEUNHAP" Type="Self.PHIEUNHAP" Multiplicity="1" />
+    <End Role="CTPHIEUNHAPDBH" Type="Self.CTPHIEUNHAPDBH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHIEUNHAP">
+        <PropertyRef Name="MAPN" />
+      </Principal>
+      <Dependent Role="CTPHIEUNHAPDBH">
+        <PropertyRef Name="MAPN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTPHIEUNHAPTTB_NHACC">
+    <End Role="NHACC" Type="Self.NHACC" Multiplicity="1" />
+    <End Role="CTPHIEUNHAPTTB" Type="Self.CTPHIEUNHAPTTB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHACC">
+        <PropertyRef Name="MANCC" />
+      </Principal>
+      <Dependent Role="CTPHIEUNHAPTTB">
+        <PropertyRef Name="MANCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTPHIEUNHAPTTB_PHIEUNHAP">
+    <End Role="PHIEUNHAP" Type="Self.PHIEUNHAP" Multiplicity="1" />
+    <End Role="CTPHIEUNHAPTTB" Type="Self.CTPHIEUNHAPTTB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHIEUNHAP">
+        <PropertyRef Name="MAPN" />
+      </Principal>
+      <Dependent Role="CTPHIEUNHAPTTB">
+        <PropertyRef Name="MAPN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTPHIEUNHAPTTB_TRANGTHIETBI">
+    <End Role="TRANGTHIETBI" Type="Self.TRANGTHIETBI" Multiplicity="1" />
+    <End Role="CTPHIEUNHAPTTB" Type="Self.CTPHIEUNHAPTTB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRANGTHIETBI">
+        <PropertyRef Name="MATHIETBI" />
+      </Principal>
+      <Dependent Role="CTPHIEUNHAPTTB">
+        <PropertyRef Name="MATHIETBI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTPHIEUNHAPXE_NHACC">
+    <End Role="NHACC" Type="Self.NHACC" Multiplicity="1" />
+    <End Role="CTPHIEUNHAPXE" Type="Self.CTPHIEUNHAPXE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHACC">
+        <PropertyRef Name="MANCC" />
+      </Principal>
+      <Dependent Role="CTPHIEUNHAPXE">
+        <PropertyRef Name="MANCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CTPHIEUNHAPXE_PHIEUNHAP">
+    <End Role="PHIEUNHAP" Type="Self.PHIEUNHAP" Multiplicity="1" />
+    <End Role="CTPHIEUNHAPXE" Type="Self.CTPHIEUNHAPXE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHIEUNHAP">
+        <PropertyRef Name="MAPN" />
+      </Principal>
+      <Dependent Role="CTPHIEUNHAPXE">
+        <PropertyRef Name="MAPN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOADONBANVE_KHACHHANG">
+    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="0..1" />
+    <End Role="HOADONBANVE" Type="Self.HOADONBANVE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="MAKH" />
+      </Principal>
+      <Dependent Role="HOADONBANVE">
+        <PropertyRef Name="MAKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOADONBANVE_NHANVIENBANHANG">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+    <End Role="HOADONBANVE" Type="Self.HOADONBANVE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MANV" />
+      </Principal>
+      <Dependent Role="HOADONBANVE">
+        <PropertyRef Name="MANV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOADONTHUEHLV_DICHVUTHUEHLV">
+    <End Role="DICHVUTHUEHLV" Type="Self.DICHVUTHUEHLV" Multiplicity="0..1" />
+    <End Role="HOADONTHUEHLV" Type="Self.HOADONTHUEHLV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DICHVUTHUEHLV">
+        <PropertyRef Name="MADV" />
+      </Principal>
+      <Dependent Role="HOADONTHUEHLV">
+        <PropertyRef Name="MADV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOADONTHUEHLV_HUANLUYENVIEN">
+    <End Role="HUANLUYENVIEN" Type="Self.HUANLUYENVIEN" Multiplicity="0..1" />
+    <End Role="HOADONTHUEHLV" Type="Self.HOADONTHUEHLV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HUANLUYENVIEN">
+        <PropertyRef Name="MAHLV" />
+      </Principal>
+      <Dependent Role="HOADONTHUEHLV">
+        <PropertyRef Name="MAHLV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOADONTHUEHLV_KHACHHANG">
+    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="0..1" />
+    <End Role="HOADONTHUEHLV" Type="Self.HOADONTHUEHLV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="MAKH" />
+      </Principal>
+      <Dependent Role="HOADONTHUEHLV">
+        <PropertyRef Name="MAKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOADONTHUEHLV_NHANVIENBANHANG">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+    <End Role="HOADONTHUEHLV" Type="Self.HOADONTHUEHLV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MANV" />
+      </Principal>
+      <Dependent Role="HOADONTHUEHLV">
+        <PropertyRef Name="MANV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOADONTHUEHLVCTXE_HOADONTHUEHLV">
+    <End Role="HOADONTHUEHLV" Type="Self.HOADONTHUEHLV" Multiplicity="1" />
+    <End Role="HOADONTHUEHLVCTXE" Type="Self.HOADONTHUEHLVCTXE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOADONTHUEHLV">
+        <PropertyRef Name="MAHD" />
+      </Principal>
+      <Dependent Role="HOADONTHUEHLVCTXE">
+        <PropertyRef Name="MAHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOADONTHUEHLVCTXE_XE">
+    <End Role="XE" Type="Self.XE" Multiplicity="1" />
+    <End Role="HOADONTHUEHLVCTXE" Type="Self.HOADONTHUEHLVCTXE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XE">
+        <PropertyRef Name="MAXE" />
+      </Principal>
+      <Dependent Role="HOADONTHUEHLVCTXE">
+        <PropertyRef Name="MAXE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOATDONG_KHACHHANG">
+    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="0..1" />
+    <End Role="HOATDONG" Type="Self.HOATDONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="MAKH" />
+      </Principal>
+      <Dependent Role="HOATDONG">
+        <PropertyRef Name="MAKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOATDONG_XE">
+    <End Role="XE" Type="Self.XE" Multiplicity="1" />
+    <End Role="HOATDONG" Type="Self.HOATDONG" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="XE">
+        <PropertyRef Name="MAXE" />
+      </Principal>
+      <Dependent Role="HOATDONG">
+        <PropertyRef Name="MAXE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LOAIDOBAOHO_DOBAOHO">
+    <End Role="LOAIDOBAOHO" Type="Self.LOAIDOBAOHO" Multiplicity="0..1" />
+    <End Role="DOBAOHO" Type="Self.DOBAOHO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAIDOBAOHO">
+        <PropertyRef Name="MALOAIDBH" />
+      </Principal>
+      <Dependent Role="DOBAOHO">
+        <PropertyRef Name="MALOAIDBH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NHANVIEN_LOAINHANVIEN">
+    <End Role="LOAINHANVIEN" Type="Self.LOAINHANVIEN" Multiplicity="0..1" />
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAINHANVIEN">
+        <PropertyRef Name="MALOAI" />
+      </Principal>
+      <Dependent Role="NHANVIEN">
+        <PropertyRef Name="MALOAI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NHANVIENKITHUAT_BAOTRI">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+    <End Role="BAOTRI" Type="Self.BAOTRI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MANV" />
+      </Principal>
+      <Dependent Role="BAOTRI">
+        <PropertyRef Name="MANV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PHIEUNHAPXE_NHANVIEN">
+    <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+    <End Role="PHIEUNHAP" Type="Self.PHIEUNHAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHANVIEN">
+        <PropertyRef Name="MANV" />
+      </Principal>
+      <Dependent Role="PHIEUNHAP">
+        <PropertyRef Name="MANV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TRANGTHIETBI_CTBAOTRI">
+    <End Role="TRANGTHIETBI" Type="Self.TRANGTHIETBI" Multiplicity="0..1" />
+    <End Role="CTBAOTRI" Type="Self.CTBAOTRI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRANGTHIETBI">
+        <PropertyRef Name="MATHIETBI" />
+      </Principal>
+      <Dependent Role="CTBAOTRI">
+        <PropertyRef Name="MATHIETBI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TRANGTHIETBI_NHACC">
+    <End Role="NHACC" Type="Self.NHACC" Multiplicity="0..1" />
+    <End Role="TRANGTHIETBI" Type="Self.TRANGTHIETBI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHACC">
+        <PropertyRef Name="MANCC" />
+      </Principal>
+      <Dependent Role="TRANGTHIETBI">
+        <PropertyRef Name="MANCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_XE_BAOTRI">
+    <End Role="XE" Type="Self.XE" Multiplicity="0..1" />
+    <End Role="BAOTRI" Type="Self.BAOTRI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XE">
+        <PropertyRef Name="MAXE" />
+      </Principal>
+      <Dependent Role="BAOTRI">
+        <PropertyRef Name="MAXE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_XE_NHACC">
+    <End Role="NHACC" Type="Self.NHACC" Multiplicity="0..1" />
+    <End Role="XE" Type="Self.XE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHACC">
+        <PropertyRef Name="MANCC" />
+      </Principal>
+      <Dependent Role="XE">
+        <PropertyRef Name="MANCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QL_KVCModelStoreContainer">
+    <EntitySet Name="ACCOUNT" EntityType="Self.ACCOUNT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BAOTRI" EntityType="Self.BAOTRI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CTBAOTRI" EntityType="Self.CTBAOTRI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CTHDDOBAOHO" EntityType="Self.CTHDDOBAOHO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CTHOADONBANVE" EntityType="Self.CTHOADONBANVE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CTPHIEUNHAPDBH" EntityType="Self.CTPHIEUNHAPDBH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CTPHIEUNHAPTTB" EntityType="Self.CTPHIEUNHAPTTB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CTPHIEUNHAPXE" EntityType="Self.CTPHIEUNHAPXE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DICHVUTHUEHLV" EntityType="Self.DICHVUTHUEHLV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DOBAOHO" EntityType="Self.DOBAOHO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HOADONBANVE" EntityType="Self.HOADONBANVE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HOADONTHUEHLV" EntityType="Self.HOADONTHUEHLV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HOADONTHUEHLVCTXE" EntityType="Self.HOADONTHUEHLVCTXE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HOATDONG" EntityType="Self.HOATDONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HUANLUYENVIEN" EntityType="Self.HUANLUYENVIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOAIDOBAOHO" EntityType="Self.LOAIDOBAOHO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOAINHANVIEN" EntityType="Self.LOAINHANVIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOAIVE" EntityType="Self.LOAIVE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHACC" EntityType="Self.NHACC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHIEUNHAP" EntityType="Self.PHIEUNHAP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRANGTHIETBI" EntityType="Self.TRANGTHIETBI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="XE" EntityType="Self.XE" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ACCOUNT_LOAINHANVIEN" Association="Self.FK_ACCOUNT_LOAINHANVIEN">
+      <End Role="LOAINHANVIEN" EntitySet="LOAINHANVIEN" />
+      <End Role="ACCOUNT" EntitySet="ACCOUNT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ACCOUNT_NHANVIEN" Association="Self.FK_ACCOUNT_NHANVIEN">
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+      <End Role="ACCOUNT" EntitySet="ACCOUNT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BAOTRI_CTBAOTRI" Association="Self.FK_BAOTRI_CTBAOTRI">
+      <End Role="BAOTRI" EntitySet="BAOTRI" />
+      <End Role="CTBAOTRI" EntitySet="CTBAOTRI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTHDDOBAOHO_DOBAOHO" Association="Self.FK_CTHDDOBAOHO_DOBAOHO">
+      <End Role="DOBAOHO" EntitySet="DOBAOHO" />
+      <End Role="CTHDDOBAOHO" EntitySet="CTHDDOBAOHO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTHDDOBAOHO_HOADONBANVE" Association="Self.FK_CTHDDOBAOHO_HOADONBANVE">
+      <End Role="HOADONBANVE" EntitySet="HOADONBANVE" />
+      <End Role="CTHDDOBAOHO" EntitySet="CTHDDOBAOHO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTHDDOBAOHO_LOAIDOBAOHO" Association="Self.FK_CTHDDOBAOHO_LOAIDOBAOHO">
+      <End Role="LOAIDOBAOHO" EntitySet="LOAIDOBAOHO" />
+      <End Role="CTHDDOBAOHO" EntitySet="CTHDDOBAOHO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTHOADONBANVE_HOADONBANVE" Association="Self.FK_CTHOADONBANVE_HOADONBANVE">
+      <End Role="HOADONBANVE" EntitySet="HOADONBANVE" />
+      <End Role="CTHOADONBANVE" EntitySet="CTHOADONBANVE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTHOADONBANVE_LOAIVE" Association="Self.FK_CTHOADONBANVE_LOAIVE">
+      <End Role="LOAIVE" EntitySet="LOAIVE" />
+      <End Role="CTHOADONBANVE" EntitySet="CTHOADONBANVE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTHOADONBANVE_XE" Association="Self.FK_CTHOADONBANVE_XE">
+      <End Role="XE" EntitySet="XE" />
+      <End Role="CTHOADONBANVE" EntitySet="CTHOADONBANVE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTPHIEUNHAPDBH_NHACC" Association="Self.FK_CTPHIEUNHAPDBH_NHACC">
+      <End Role="NHACC" EntitySet="NHACC" />
+      <End Role="CTPHIEUNHAPDBH" EntitySet="CTPHIEUNHAPDBH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTPHIEUNHAPDBH_PHIEUNHAP" Association="Self.FK_CTPHIEUNHAPDBH_PHIEUNHAP">
+      <End Role="PHIEUNHAP" EntitySet="PHIEUNHAP" />
+      <End Role="CTPHIEUNHAPDBH" EntitySet="CTPHIEUNHAPDBH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTPHIEUNHAPTTB_NHACC" Association="Self.FK_CTPHIEUNHAPTTB_NHACC">
+      <End Role="NHACC" EntitySet="NHACC" />
+      <End Role="CTPHIEUNHAPTTB" EntitySet="CTPHIEUNHAPTTB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTPHIEUNHAPTTB_PHIEUNHAP" Association="Self.FK_CTPHIEUNHAPTTB_PHIEUNHAP">
+      <End Role="PHIEUNHAP" EntitySet="PHIEUNHAP" />
+      <End Role="CTPHIEUNHAPTTB" EntitySet="CTPHIEUNHAPTTB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTPHIEUNHAPTTB_TRANGTHIETBI" Association="Self.FK_CTPHIEUNHAPTTB_TRANGTHIETBI">
+      <End Role="TRANGTHIETBI" EntitySet="TRANGTHIETBI" />
+      <End Role="CTPHIEUNHAPTTB" EntitySet="CTPHIEUNHAPTTB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTPHIEUNHAPXE_NHACC" Association="Self.FK_CTPHIEUNHAPXE_NHACC">
+      <End Role="NHACC" EntitySet="NHACC" />
+      <End Role="CTPHIEUNHAPXE" EntitySet="CTPHIEUNHAPXE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CTPHIEUNHAPXE_PHIEUNHAP" Association="Self.FK_CTPHIEUNHAPXE_PHIEUNHAP">
+      <End Role="PHIEUNHAP" EntitySet="PHIEUNHAP" />
+      <End Role="CTPHIEUNHAPXE" EntitySet="CTPHIEUNHAPXE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOADONBANVE_KHACHHANG" Association="Self.FK_HOADONBANVE_KHACHHANG">
+      <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+      <End Role="HOADONBANVE" EntitySet="HOADONBANVE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOADONBANVE_NHANVIENBANHANG" Association="Self.FK_HOADONBANVE_NHANVIENBANHANG">
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+      <End Role="HOADONBANVE" EntitySet="HOADONBANVE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOADONTHUEHLV_DICHVUTHUEHLV" Association="Self.FK_HOADONTHUEHLV_DICHVUTHUEHLV">
+      <End Role="DICHVUTHUEHLV" EntitySet="DICHVUTHUEHLV" />
+      <End Role="HOADONTHUEHLV" EntitySet="HOADONTHUEHLV" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOADONTHUEHLV_HUANLUYENVIEN" Association="Self.FK_HOADONTHUEHLV_HUANLUYENVIEN">
+      <End Role="HUANLUYENVIEN" EntitySet="HUANLUYENVIEN" />
+      <End Role="HOADONTHUEHLV" EntitySet="HOADONTHUEHLV" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOADONTHUEHLV_KHACHHANG" Association="Self.FK_HOADONTHUEHLV_KHACHHANG">
+      <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+      <End Role="HOADONTHUEHLV" EntitySet="HOADONTHUEHLV" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOADONTHUEHLV_NHANVIENBANHANG" Association="Self.FK_HOADONTHUEHLV_NHANVIENBANHANG">
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+      <End Role="HOADONTHUEHLV" EntitySet="HOADONTHUEHLV" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOADONTHUEHLVCTXE_HOADONTHUEHLV" Association="Self.FK_HOADONTHUEHLVCTXE_HOADONTHUEHLV">
+      <End Role="HOADONTHUEHLV" EntitySet="HOADONTHUEHLV" />
+      <End Role="HOADONTHUEHLVCTXE" EntitySet="HOADONTHUEHLVCTXE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOADONTHUEHLVCTXE_XE" Association="Self.FK_HOADONTHUEHLVCTXE_XE">
+      <End Role="XE" EntitySet="XE" />
+      <End Role="HOADONTHUEHLVCTXE" EntitySet="HOADONTHUEHLVCTXE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOATDONG_KHACHHANG" Association="Self.FK_HOATDONG_KHACHHANG">
+      <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+      <End Role="HOATDONG" EntitySet="HOATDONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOATDONG_XE" Association="Self.FK_HOATDONG_XE">
+      <End Role="XE" EntitySet="XE" />
+      <End Role="HOATDONG" EntitySet="HOATDONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LOAIDOBAOHO_DOBAOHO" Association="Self.FK_LOAIDOBAOHO_DOBAOHO">
+      <End Role="LOAIDOBAOHO" EntitySet="LOAIDOBAOHO" />
+      <End Role="DOBAOHO" EntitySet="DOBAOHO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NHANVIEN_LOAINHANVIEN" Association="Self.FK_NHANVIEN_LOAINHANVIEN">
+      <End Role="LOAINHANVIEN" EntitySet="LOAINHANVIEN" />
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NHANVIENKITHUAT_BAOTRI" Association="Self.FK_NHANVIENKITHUAT_BAOTRI">
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+      <End Role="BAOTRI" EntitySet="BAOTRI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PHIEUNHAPXE_NHANVIEN" Association="Self.FK_PHIEUNHAPXE_NHANVIEN">
+      <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+      <End Role="PHIEUNHAP" EntitySet="PHIEUNHAP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TRANGTHIETBI_CTBAOTRI" Association="Self.FK_TRANGTHIETBI_CTBAOTRI">
+      <End Role="TRANGTHIETBI" EntitySet="TRANGTHIETBI" />
+      <End Role="CTBAOTRI" EntitySet="CTBAOTRI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TRANGTHIETBI_NHACC" Association="Self.FK_TRANGTHIETBI_NHACC">
+      <End Role="NHACC" EntitySet="NHACC" />
+      <End Role="TRANGTHIETBI" EntitySet="TRANGTHIETBI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_XE_BAOTRI" Association="Self.FK_XE_BAOTRI">
+      <End Role="XE" EntitySet="XE" />
+      <End Role="BAOTRI" EntitySet="BAOTRI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_XE_NHACC" Association="Self.FK_XE_NHACC">
+      <End Role="NHACC" EntitySet="NHACC" />
+      <End Role="XE" EntitySet="XE" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

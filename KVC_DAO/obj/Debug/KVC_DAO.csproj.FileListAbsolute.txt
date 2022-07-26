@@ -1,0 +1,15 @@
+C:\Users\Admin-s\source\repos\QuanLyKVC\KVC_DAO\bin\Debug\KVC_DAO.dll.config
+C:\Users\Admin-s\source\repos\QuanLyKVC\KVC_DAO\bin\Debug\KVC_DAO.dll
+C:\Users\Admin-s\source\repos\QuanLyKVC\KVC_DAO\bin\Debug\KVC_DAO.pdb
+C:\Users\Admin-s\source\repos\QuanLyKVC\KVC_DAO\bin\Debug\EntityFramework.dll
+C:\Users\Admin-s\source\repos\QuanLyKVC\KVC_DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin-s\source\repos\QuanLyKVC\KVC_DAO\bin\Debug\KVC_DTO.dll
+C:\Users\Admin-s\source\repos\QuanLyKVC\KVC_DAO\bin\Debug\KVC_DTO.pdb
+C:\Users\Admin-s\source\repos\QuanLyKVC\KVC_DAO\bin\Debug\KVC_DTO.dll.config
+C:\Users\Admin-s\source\repos\QuanLyKVC\KVC_DAO\bin\Debug\EntityFramework.xml
+C:\Users\Admin-s\source\repos\QuanLyKVC\KVC_DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin-s\source\repos\QuanLyKVC\KVC_DAO\obj\Debug\KVC_DAO.csproj.AssemblyReference.cache
+C:\Users\Admin-s\source\repos\QuanLyKVC\KVC_DAO\obj\Debug\KVC_DAO.csproj.CoreCompileInputs.cache
+C:\Users\Admin-s\source\repos\QuanLyKVC\KVC_DAO\obj\Debug\KVC_DAO.csproj.CopyComplete
+C:\Users\Admin-s\source\repos\QuanLyKVC\KVC_DAO\obj\Debug\KVC_DAO.dll
+C:\Users\Admin-s\source\repos\QuanLyKVC\KVC_DAO\obj\Debug\KVC_DAO.pdb

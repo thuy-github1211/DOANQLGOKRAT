@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c6f851a3bf3146bbab3d0a16c85798c8" Name="Diagram1">
+        <EntityTypeShape EntityType="QL_KVCModel.ACCOUNT" Width="1.5" PointX="5.25" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.BAOTRI" Width="1.5" PointX="5.25" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.CTBAOTRI" Width="1.5" PointX="10.5" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.CTHDDOBAOHO" Width="1.5" PointX="10.5" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.CTHOADONBANVE" Width="1.5" PointX="13.5" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.CTPHIEUNHAPDBH" Width="1.5" PointX="7.5" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.CTPHIEUNHAPTTB" Width="1.5" PointX="10.5" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.CTPHIEUNHAPXE" Width="1.5" PointX="7.5" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.DICHVUTHUEHLV" Width="1.5" PointX="6" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.DOBAOHO" Width="1.5" PointX="8.25" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.HOADONBANVE" Width="1.5" PointX="8.25" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.HOADONTHUEHLV" Width="1.5" PointX="8.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.HOADONTHUEHLVCTXE" Width="1.5" PointX="10.5" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.HOATDONG" Width="1.5" PointX="13.5" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.HUANLUYENVIEN" Width="1.5" PointX="6" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.KHACHHANG" Width="1.5" PointX="6" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.LOAIDOBAOHO" Width="1.5" PointX="6" PointY="36" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.LOAINHANVIEN" Width="1.5" PointX="0.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.LOAIVE" Width="1.5" PointX="11.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.NHACC" Width="1.5" PointX="6" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.NHANVIEN" Width="1.5" PointX="3" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.PHIEUNHAP" Width="1.5" PointX="5.25" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.TRANGTHIETBI" Width="1.5" PointX="8.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QL_KVCModel.XE" Width="1.5" PointX="8.25" PointY="31.5" IsExpanded="true" />
+        <AssociationConnector Association="QL_KVCModel.FK_ACCOUNT_LOAINHANVIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_ACCOUNT_NHANVIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_BAOTRI_CTBAOTRI" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_NHANVIENKITHUAT_BAOTRI" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_XE_BAOTRI" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_TRANGTHIETBI_CTBAOTRI" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_CTHDDOBAOHO_DOBAOHO" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_CTHDDOBAOHO_HOADONBANVE" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_CTHDDOBAOHO_LOAIDOBAOHO" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_CTHOADONBANVE_HOADONBANVE" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_CTHOADONBANVE_LOAIVE" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_CTHOADONBANVE_XE" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_CTPHIEUNHAPDBH_NHACC" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_CTPHIEUNHAPDBH_PHIEUNHAP" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_CTPHIEUNHAPTTB_NHACC" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_CTPHIEUNHAPTTB_PHIEUNHAP" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_CTPHIEUNHAPTTB_TRANGTHIETBI" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_CTPHIEUNHAPXE_NHACC" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_CTPHIEUNHAPXE_PHIEUNHAP" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_HOADONTHUEHLV_DICHVUTHUEHLV" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_LOAIDOBAOHO_DOBAOHO" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_HOADONBANVE_KHACHHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_HOADONBANVE_NHANVIENBANHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_HOADONTHUEHLV_HUANLUYENVIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_HOADONTHUEHLV_KHACHHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_HOADONTHUEHLV_NHANVIENBANHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_HOADONTHUEHLVCTXE_HOADONTHUEHLV" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_HOADONTHUEHLVCTXE_XE" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_HOATDONG_KHACHHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_HOATDONG_XE" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_NHANVIEN_LOAINHANVIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_TRANGTHIETBI_NHACC" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_XE_NHACC" ManuallyRouted="false" />
+        <AssociationConnector Association="QL_KVCModel.FK_PHIEUNHAPXE_NHANVIEN" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

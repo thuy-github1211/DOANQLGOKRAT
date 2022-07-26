@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QL_KVCModelStoreContainer" CdmEntityContainer="QL_KVCEntities">
+    <EntitySetMapping Name="BAOTRIs">
+      <EntityTypeMapping TypeName="QL_KVCModel.BAOTRI">
+        <MappingFragment StoreEntitySet="BAOTRI">
+          <ScalarProperty Name="MABAOTRI" ColumnName="MABAOTRI" />
+          <ScalarProperty Name="TENBAOTRI" ColumnName="TENBAOTRI" />
+          <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+          <ScalarProperty Name="THOIGIANBAOTRI" ColumnName="THOIGIANBAOTRI" />
+          <ScalarProperty Name="MANVKT" ColumnName="MANVKT" />
+          <ScalarProperty Name="MAXE" ColumnName="MAXE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CTHOADONBANTHUCANs">
+      <EntityTypeMapping TypeName="QL_KVCModel.CTHOADONBANTHUCAN">
+        <MappingFragment StoreEntitySet="CTHOADONBANTHUCAN">
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+          <ScalarProperty Name="MATHUCAN" ColumnName="MATHUCAN" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+          <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
+          <ScalarProperty Name="THANHTIEN" ColumnName="THANHTIEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CTHOADONBANVEs">
+      <EntityTypeMapping TypeName="QL_KVCModel.CTHOADONBANVE">
+        <MappingFragment StoreEntitySet="CTHOADONBANVE">
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+          <ScalarProperty Name="MAVE" ColumnName="MAVE" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+          <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
+          <ScalarProperty Name="THANHTIEN" ColumnName="THANHTIEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CTHOADONTHUEHLVs">
+      <EntityTypeMapping TypeName="QL_KVCModel.CTHOADONTHUEHLV">
+        <MappingFragment StoreEntitySet="CTHOADONTHUEHLV">
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+          <ScalarProperty Name="MADV" ColumnName="MADV" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+          <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
+          <ScalarProperty Name="THANHTIEN" ColumnName="THANHTIEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DICHVUTHUEHLVs">
+      <EntityTypeMapping TypeName="QL_KVCModel.DICHVUTHUEHLV">
+        <MappingFragment StoreEntitySet="DICHVUTHUEHLV">
+          <ScalarProperty Name="MADV" ColumnName="MADV" />
+          <ScalarProperty Name="TENDV" ColumnName="TENDV" />
+          <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
+          <ScalarProperty Name="MAHLV" ColumnName="MAHLV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOBAOHOes">
+      <EntityTypeMapping TypeName="QL_KVCModel.DOBAOHO">
+        <MappingFragment StoreEntitySet="DOBAOHO">
+          <ScalarProperty Name="MADOBAOHO" ColumnName="MADOBAOHO" />
+          <ScalarProperty Name="TENDOBAOHO" ColumnName="TENDOBAOHO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HOADONBANTHUCANs">
+      <EntityTypeMapping TypeName="QL_KVCModel.HOADONBANTHUCAN">
+        <MappingFragment StoreEntitySet="HOADONBANTHUCAN">
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+          <ScalarProperty Name="MANVBH" ColumnName="MANVBH" />
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+          <ScalarProperty Name="INLUC" ColumnName="INLUC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HOADONBANVEs">
+      <EntityTypeMapping TypeName="QL_KVCModel.HOADONBANVE">
+        <MappingFragment StoreEntitySet="HOADONBANVE">
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+          <ScalarProperty Name="MAVE" ColumnName="MAVE" />
+          <ScalarProperty Name="MANVBH" ColumnName="MANVBH" />
+          <ScalarProperty Name="INLUC" ColumnName="INLUC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HOADONTHUEHLVs">
+      <EntityTypeMapping TypeName="QL_KVCModel.HOADONTHUEHLV">
+        <MappingFragment StoreEntitySet="HOADONTHUEHLV">
+          <ScalarProperty Name="MAHD" ColumnName="MAHD" />
+          <ScalarProperty Name="NGAYLAP" ColumnName="NGAYLAP" />
+          <ScalarProperty Name="MANVBH" ColumnName="MANVBH" />
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HUANLUYENVIENs">
+      <EntityTypeMapping TypeName="QL_KVCModel.HUANLUYENVIEN">
+        <MappingFragment StoreEntitySet="HUANLUYENVIEN">
+          <ScalarProperty Name="MAHLV" ColumnName="MAHLV" />
+          <ScalarProperty Name="TENHLV" ColumnName="TENHLV" />
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KHACHHANGs">
+      <EntityTypeMapping TypeName="QL_KVCModel.KHACHHANG">
+        <MappingFragment StoreEntitySet="KHACHHANG">
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+          <ScalarProperty Name="TENKH" ColumnName="TENKH" />
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOAIDOBAOHOes">
+      <EntityTypeMapping TypeName="QL_KVCModel.LOAIDOBAOHO">
+        <MappingFragment StoreEntitySet="LOAIDOBAOHO">
+          <ScalarProperty Name="MALOAIDBH" ColumnName="MALOAIDBH" />
+          <ScalarProperty Name="MADOBAOHO" ColumnName="MADOBAOHO" />
+          <ScalarProperty Name="TENLOAIDBH" ColumnName="TENLOAIDBH" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHACCs">
+      <EntityTypeMapping TypeName="QL_KVCModel.NHACC">
+        <MappingFragment StoreEntitySet="NHACC">
+          <ScalarProperty Name="MANCC" ColumnName="MANCC" />
+          <ScalarProperty Name="TENNCC" ColumnName="TENNCC" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHANVIENBANHANGs">
+      <EntityTypeMapping TypeName="QL_KVCModel.NHANVIENBANHANG">
+        <MappingFragment StoreEntitySet="NHANVIENBANHANG">
+          <ScalarProperty Name="MANVBH" ColumnName="MANVBH" />
+          <ScalarProperty Name="TENNVBH" ColumnName="TENNVBH" />
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHANVIENKITHUATs">
+      <EntityTypeMapping TypeName="QL_KVCModel.NHANVIENKITHUAT">
+        <MappingFragment StoreEntitySet="NHANVIENKITHUAT">
+          <ScalarProperty Name="MANVKT" ColumnName="MANVKT" />
+          <ScalarProperty Name="TENNVKT" ColumnName="TENNVKT" />
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="THUCANs">
+      <EntityTypeMapping TypeName="QL_KVCModel.THUCAN">
+        <MappingFragment StoreEntitySet="THUCAN">
+          <ScalarProperty Name="MATHUCAN" ColumnName="MATHUCAN" />
+          <ScalarProperty Name="TENTHUCAN" ColumnName="TENTHUCAN" />
+          <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRANGTHIETBIs">
+      <EntityTypeMapping TypeName="QL_KVCModel.TRANGTHIETBI">
+        <MappingFragment StoreEntitySet="TRANGTHIETBI">
+          <ScalarProperty Name="MATHIETBI" ColumnName="MATHIETBI" />
+          <ScalarProperty Name="TENTHIETBI" ColumnName="TENTHIETBI" />
+          <ScalarProperty Name="NGAYNHAP" ColumnName="NGAYNHAP" />
+          <ScalarProperty Name="NAMSX" ColumnName="NAMSX" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VEs">
+      <EntityTypeMapping TypeName="QL_KVCModel.VE">
+        <MappingFragment StoreEntitySet="VE">
+          <ScalarProperty Name="MAVE" ColumnName="MAVE" />
+          <ScalarProperty Name="TENVE" ColumnName="TENVE" />
+          <ScalarProperty Name="DONGIA" ColumnName="DONGIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="XEs">
+      <EntityTypeMapping TypeName="QL_KVCModel.XE">
+        <MappingFragment StoreEntitySet="XE">
+          <ScalarProperty Name="MAXE" ColumnName="MAXE" />
+          <ScalarProperty Name="TENXE" ColumnName="TENXE" />
+          <ScalarProperty Name="NGAYNHAP" ColumnName="NGAYNHAP" />
+          <ScalarProperty Name="SOLUONG" ColumnName="SOLUONG" />
+          <ScalarProperty Name="NAMSX" ColumnName="NAMSX" />
+          <ScalarProperty Name="MANCC" ColumnName="MANCC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
